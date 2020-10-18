@@ -1,0 +1,25 @@
+#!name=Marcus iOS Cookies Module
+#!desc=Marcus iOS Cookies 模块配置
+#!system=ios
+
+[Script]
+{REWRITE} 京东多合一 = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
+{REWRITE} 爱奇艺会员 = type=http-request,pattern=^https?:\/\/iface(\d)?\.iqiyi\.com\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0
+{REWRITE} 中国电信 = type=http-request,pattern=^https:\/\/wapside.189.cn:9001\/api\/home\/homeInfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js,script-update-interval=0
+{REWRITE} 中国联通 = type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,script-update-interval=0
+{REWRITE} 中国联通 = type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,script-update-interval=0
+{REWRITE} 中国联通 = type=http-request,pattern=^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,script-update-interval=0
+{REWRITE} 百度贴吧 = type=http-request,pattern=^https?:\/\/tieba\.baidu\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js,script-update-interval=0
+{REWRITE} BILIBILI = type=http-request,pattern=^https:\/\/(www|live)\.bilibili\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js,script-update-interval=0
+{REWRITE} CSDN = type=http-request,pattern=^https:\/\/gw.csdn.net\/mini-app\/v2\/lucky_draw\/login\/sign_in\?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.cookie.js,script-update-interval=0
+{REWRITE} CSDN = type=http-request,pattern=^https:\/\/passport.csdn.net\/v2\/api\/app\/login\/checkAndRefreshToken,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.cookie.js,script-update-interval=0
+{REWRITE} 豆瓣时间 = type=http-request,pattern=^https:\/\/frodo\.douban\.com\/api\/v2\/niffler\/check_in\/status,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/dbsj/dbsj.cookie.js,script-update-interval=0
+{REWRITE} 美团 = type=http-request,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js,script-update-interval=0
+{REWRITE} 网易云音乐 = type=http-request,pattern=^https:\/\/music.163.com\/weapi\/user\/level,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js,script-update-interval=0
+{REWRITE} 百果园 = type=http-request,pattern=^https:\/\/wx-mini.pagoda.com.cn\/api\/v1\/wxmini\/signIn\/customer,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/pagoda/pagoda.cookie.js,script-update-interval=0
+{REWRITE} 什么值得买 = type=http-request,pattern=^https:\/\/www\.smzdm\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js,script-update-interval=0
+{REWRITE} 喜马拉雅 = type=http-request,pattern=^https?:\/\/.*\/mobile\-user\/homePage\/.*,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js,script-update-interval=0
+{REWRITE} 微博超话 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button),script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.cookie.js,requires-body=false
+
+[MITM]
+hostname = %INSERT%, api.m.jd.com, ifac*.iqiyi.com, wapside.189.cn:9001, act.10010.com, m.client.10010.com, tieba.baidu.com, *.bilibili.com, *.csdn.net, frodo.douban.com, i.meituan.com, music.163.com, wx-mini.pagoda.com.cn, *.smzdm.com, mobwsa.ximalaya.com, api.weibo.cn
