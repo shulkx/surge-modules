@@ -3,18 +3,18 @@
 #!system=ios
 
 [Script]
-{TASK} 京东多合一 (NobyDa) = type=cron,cronexp="5,6,7 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
-{TASK} 爱奇艺会员 (NobyDa) = type=cron,cronexp="7,10 0 * * *",script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0
+{TASK} 京东多合一 (NobyDa) = type=cron,cronexp="5,6 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
+{TASK} 爱奇艺会员 (NobyDa) = type=cron,cronexp="10 0 * * *",script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0
 {TASK} 中国电信 (chavyleung) = type=cron,cronexp="10 0 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,script-update-interval=0
-{TASK} 中国联通 (chavyleung) = type=cron,cronexp="10,13 0 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,script-update-interval=0
-{TASK} 百度贴吧 (chavyleung) = type=cron,cronexp=10 0 0 * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js,script-update-interval=0
-{TASK} BILIBILI (chavyleung) = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
-{TASK} BILIBILI Silver2Coin (chavyleung) = type=cron,cronexp=11 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js,script-update-interval=0
-{TASK} CSDN (chavyleung) = type=cron,cronexp=12 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.js,script-update-interval=0
-{TASK} 豆瓣时间 (chavyleung) = type=cron,cronexp=15 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/dbsj/dbsj.js,script-update-interval=0
-{TASK} 美团 (chavyleung) = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,script-update-interval=0
-{TASK} 网易云音乐 (chavyleung) = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js,script-update-interval=0
-{TASK} 百果园 (chavyleung) = type=cron,cronexp=10 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/pagoda/pagoda.js,script-update-interval=0
-{TASK} 什么值得买 (chavyleung) = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js,script-update-interval=0
-{TASK} 喜马拉雅 (chavyleung) = type=cron,cronexp=11 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,script-update-interval=0
-{TASK} 微博超话 (evilbutcher) = type=cron,cronexp=5 0  * * *,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.js,wake-system=true,timeout=600
+{TASK} 中国联通 (chavyleung) = type=cron,cronexp="10 0 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,script-update-interval=0
+{TASK} 百度贴吧 (chavyleung) = type=cron,cronexp="15 0 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js,script-update-interval=0
+{TASK} BILIBILI (chavyleung) = type=cron,cronexp="10 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
+{TASK} BILIBILI Silver2Coin (chavyleung) = type=cron,cronexp="11 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js,script-update-interval=0
+{TASK} CSDN (chavyleung) = type=cron,cronexp="12 0 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.js,script-update-interval=0
+{TASK} 豆瓣时间 (chavyleung) = type=cron,cronexp="15 0 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/dbsj/dbsj.js,script-update-interval=0
+{TASK} 美团 (chavyleung) = type=cron,cronexp="10 0 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,script-update-interval=0
+{TASK} 网易云音乐 (chavyleung) = type=cron,cronexp="10 0 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js,script-update-interval=0
+{TASK} 百果园 (chavyleung) = type=cron,cronexp="10 0 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/pagoda/pagoda.js,script-update-interval=0
+{TASK} 什么值得买 (chavyleung) = type=cron,cronexp="10 0 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js,script-update-interval=0
+{TASK} 喜马拉雅 (chavyleung) = type=cron,cronexp="11 0 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,script-update-interval=0
+{TASK} 微博超话 (evilbutcher) = type=cron,cronexp="15 0 0 * * *",script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.js,wake-system=true,timeout=600
