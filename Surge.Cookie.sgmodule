@@ -20,6 +20,7 @@
 {REWRITE} 什么值得买 = type=http-request,pattern=^https:\/\/www\.smzdm\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js,script-update-interval=0
 {REWRITE} 喜马拉雅 = type=http-request,pattern=^https?:\/\/.*\/mobile\-user\/homePage\/.*,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js,script-update-interval=0
 {REWRITE} 微博超话 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button),script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.cookie.js,requires-body=false
+
 # > {TASK} 京东
 # > 宠汪汪强制为别人助力 使用方法：
 # > 设置好相应软件的重写
@@ -36,5 +37,6 @@
 # > 可能有两位数误差,影响不大
 # > 聚宝盆最下方显示上轮前六名的投入狗粮，收入积分，以及纯收益（即：收入积分 - 投入狗粮）
 聚宝盆投狗粮辅助 = type=http-response,pattern=^https:\/\/jdjoy\.jd\.com\/pet\/getPetTreasureBox|^https:\/\/draw\.jdfcloud\.com\/\/pet\/getPetTreasureBox,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_petTreasureBox.js
+
 [MITM]
 hostname = %INSERT%, api.m.jd.com, ifac*.iqiyi.com, wapside.189.cn:9001, act.10010.com, m.client.10010.com, tieba.baidu.com, *.bilibili.com, *.csdn.net, frodo.douban.com, i.meituan.com, music.163.com, wx-mini.pagoda.com.cn, *.smzdm.com, mobwsa.ximalaya.com, api.weibo.cn, draw.jdfcloud.com, jdjoy.jd.com
