@@ -20,6 +20,21 @@
 {REWRITE} 什么值得买 = type=http-request,pattern=^https:\/\/www\.smzdm\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js,script-update-interval=0
 {REWRITE} 喜马拉雅 = type=http-request,pattern=^https?:\/\/.*\/mobile\-user\/homePage\/.*,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js,script-update-interval=0
 {REWRITE} 微博超话 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button),script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.cookie.js,requires-body=false
-
+# > {TASK} 京东
+# > 宠汪汪强制为别人助力 使用方法：
+# > 设置好相应软件的重写
+# > 从京东APP宠汪汪->领狗粮->邀请好友助力，分享给你小号微信或者微信的文件传输助手。 自己再打开刚才的分享，助力成功后，返回到此小程序首页重新进去宠汪汪即可助力下一位好友
+# > 如提示好友人气旺，说明此好友已满了三人助力，需重新进出小程序，重新进入来客有礼-宠汪汪。
+宠汪汪强制为别人助力= type=http-request,pattern=(^https:\/\/draw\.jdfcloud\.com\/\/pet\/enterRoom\/h5\?reqSource=weapp&invitePin=.*+(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?|^https:\/\/draw\.jdfcloud\.com\/\/pet\/helpFriend\?friendPin),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_help.js
+# > token获取途径：
+# > 微信搜索'来客有礼'小程序,登陆京东账号，点击底部的'我的'Tab,即可获取Token，脚本运行提示token失效后，继续按此方法获取即可
+# > 或者每天去'来客有礼'小程序->宠汪汪里面，领狗粮->签到领京豆 也可获取Token(此方法每天只能获取一次)
+宠汪汪助力更新Token = type=http-response,pattern=^https:\/\/draw\.jdfcloud\.com\/\/api\/user\/addUser\?code=\w+&, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_run.js
+宠汪汪助力获取Token = type=http-request,pattern=^https:\/\/draw\.jdfcloud\.com\/\/api\/user\/user\/detail\?openId=\w+&, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_run.js
+# > 【宠汪汪聚宝盆辅助脚本】
+# > 进入聚宝盆,显示本轮狗粮池投入总数,方便估算
+# > 可能有两位数误差,影响不大
+# > 聚宝盆最下方显示上轮前六名的投入狗粮，收入积分，以及纯收益（即：收入积分 - 投入狗粮）
+聚宝盆投狗粮辅助 = type=http-response,pattern=^https:\/\/jdjoy\.jd\.com\/pet\/getPetTreasureBox|^https:\/\/draw\.jdfcloud\.com\/\/pet\/getPetTreasureBox,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_petTreasureBox.js
 [MITM]
-hostname = %INSERT%, api.m.jd.com, ifac*.iqiyi.com, wapside.189.cn:9001, act.10010.com, m.client.10010.com, tieba.baidu.com, *.bilibili.com, *.csdn.net, frodo.douban.com, i.meituan.com, music.163.com, wx-mini.pagoda.com.cn, *.smzdm.com, mobwsa.ximalaya.com, api.weibo.cn
+hostname = %INSERT%, api.m.jd.com, ifac*.iqiyi.com, wapside.189.cn:9001, act.10010.com, m.client.10010.com, tieba.baidu.com, *.bilibili.com, *.csdn.net, frodo.douban.com, i.meituan.com, music.163.com, wx-mini.pagoda.com.cn, *.smzdm.com, mobwsa.ximalaya.com, api.weibo.cn, draw.jdfcloud.com, jdjoy.jd.com
