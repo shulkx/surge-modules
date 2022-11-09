@@ -1,0 +1,9 @@
+#!name=喜马拉雅Cookie
+#!desc=喜马拉雅每日签到获取cookie
+#!system=ios
+
+[Script]
+喜马拉雅获取Cookie = type=http-request,pattern=^http:\/\/mobile\.ximalaya\.com\/app-skin-service\/skin\/,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,requires-body=0
+
+[MITM] 
+hostname = mobile.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64
